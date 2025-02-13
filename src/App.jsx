@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Register from './register'
+import Logo from './assets/Logo.png'
 import './index.css'
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Hello</h1>
+      <div className='container'>
+      <img src={Logo} alt="logo" />SIMS PPOB
       </div>
       <h1 className='text-xl'>Vite + React</h1>
       <Register/>
