@@ -12,8 +12,8 @@ function App() {
     <div className='container mx-auto'>
       <div className='grid grid-cols-2'>
         <div className='register'>
-            <div>
-            <img src={Logo} alt="logo" />SIMS PPOB
+            <div className='simsLogo'>
+              <img src={Logo} alt="logo" />SIMS PPOB
             </div>
             <h1 className='text-xl'>Vite + React</h1>
             <Register/>
@@ -25,9 +25,7 @@ function App() {
                 Edit <code>src/App.jsx</code> and save to test HMR
               </p>
             </div>
-            <p className="read-the-docs">
-              Click on the Vite and React logos to learn more
-            </p>
+            <p></p>
         </div>
         <div className='logo'>
           <img src={IlustrasiLogin} alt="Ilustrasi Login" />
