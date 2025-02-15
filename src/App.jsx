@@ -3,6 +3,7 @@ import './index.css'
 import Register from './components/Register'
 import Login from './components/Login'
 import Home from './components/Home'
+import TopUp from './components/TopUp'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Register/>
       <Login/>
       <Home/>
+      <TopUp/>
     </div>
   )
 }

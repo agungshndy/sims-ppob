@@ -26,7 +26,7 @@ function Login() {
           <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
           <input type="password" name="buatPass" id="buatPass" placeholder="Masukkan Password Anda" required/>
           <input type="password" name="konfirmPass" id="konfirmPass" placeholder="Konfirmasi Password" required/>
-          <button className="rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+          <button className="hover:cursor-pointer rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
           Masuk
           </button>
           <p className="text-sm">Belum punya akun? Registrasi <a href="">di sini</a></p>
