@@ -16,7 +16,7 @@ function Register() {
    //    setUser(response.data);
    // }
  return (
- <div>
+ <div id='register'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
          <div className='simsLogo'>
@@ -30,7 +30,7 @@ function Register() {
             <button className="rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
             Registrasi
             </button>
-            <p className="text-sm">Sudah punya akun? Login <a href="">di sini</a></p>
+            <p className="text-sm">Sudah punya akun? Login <a href='#login'>di sini</a></p>
       </div>
       <div className='logo'>
           <img src={IlustrasiLogin} alt="Ilustrasi Login" />

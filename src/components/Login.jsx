@@ -16,7 +16,7 @@ function Login() {
    //    setUser(response.data);
    // }
  return (
- <div>
+ <div id='login'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
          <div className='simsLogo'>
