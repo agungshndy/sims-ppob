@@ -16,7 +16,7 @@ function Register() {
    //    setUser(response.data);
    // }
  return (
- <div id='register'>
+ <div id='register' className='container mx-auto'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
          <div className='logo'>

@@ -16,7 +16,7 @@ function TopUp() {
    //    setUser(response.data);
    // }
   return (
- <div id='topup'>
+ <div id='topup' className='container mx-auto'>
     <div className='header mb-5'>
       <div className="">
          <div className='logo'>

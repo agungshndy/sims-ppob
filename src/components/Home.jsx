@@ -33,7 +33,7 @@ function Home() {
    //    setUser(response.data);
    // }
   return (
- <div id='home'>
+ <div id='home' className='container mx-auto'>
     <div className='header mb-5'>
       <div className="">
          <div className='logo'>
