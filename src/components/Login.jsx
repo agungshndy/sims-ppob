@@ -20,9 +20,9 @@ function Login() {
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
          <div className='simsLogo'>
-          <img src={Logo} alt="logo"/><p className='font-bold'>SIMS PPOB</p>
+          <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
+          <h1 className='text-xl font-semibold'>Masuk atau buat akun untuk memulai</h1>
          </div>
-          <h1 className='text-xl font-bold'>Masuk atau buat akun untuk memulai</h1>
           <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
           <input type="password" name="buatPass" id="buatPass" placeholder="Masukkan Password Anda" required/>
           <input type="password" name="konfirmPass" id="konfirmPass" placeholder="Konfirmasi Password" required/>

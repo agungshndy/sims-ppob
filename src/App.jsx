@@ -1,7 +1,8 @@
 // import { useState } from 'react'
+import './index.css'
 import Register from './components/Register'
 import Login from './components/Login'
-import './index.css'
+import Home from './components/Home'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className='container mx-auto'>
       <Register/>
       <Login/>
+      <Home/>
     </div>
   )
 }

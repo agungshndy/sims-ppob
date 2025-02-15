@@ -20,7 +20,8 @@ function Register() {
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
          <div className='simsLogo'>
-            <img src={Logo} alt="logo"/><p className='font-bold'>SIMS PPOB</p>
+            <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
+            <h1 className='text-xl font-semibold'>Lengkapi data untuk membuat akun</h1>
          </div>
             <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
             <input type="text" name="namaDepan" id="namaDepan" placeholder="Nama Depan" required/>
