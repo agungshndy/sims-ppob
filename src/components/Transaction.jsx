@@ -19,15 +19,18 @@ function Transaction() {
   return (
  <div id='transaction'>
     <div className='header mb-5'>
-      <div className="">
-         <div className='logo'>
-          <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
-         </div>
-          <a className='mx-5' href="">Top Up</a>
-          <a className='mx-5' href="">Transaction</a>
-          <a className='mx-5' href="">Akun</a>
-      </div>
-    </div>
+              <div className="flex justify-between border-b-1 border-b-gray-100 p-2">
+                 <div className='logo flex space-x-2 items-center'>
+                  <img src={Logo} alt="logo"/>
+                  <p className='text-md font-semibold'>SIMS PPOB</p>
+                 </div>
+                 <div>
+                  <a className='mx-5' href="">Top Up</a>
+                  <a className='mx-5' href="">Transaction</a>
+                  <a className='mx-5' href="">Akun</a>
+                </div>
+              </div>
+        </div>
     <div className='jumbotron grid grid-cols-2 my-5'>
         <div>
           <img src={Profile} alt="profile picture" />

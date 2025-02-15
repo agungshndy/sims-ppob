@@ -19,10 +19,12 @@ function Register() {
  <div id='register' className='container mx-auto'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
-         <div className='logo'>
-            <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
-            <h1 className='text-xl font-semibold'>Lengkapi data untuk membuat akun</h1>
+         <div className='logo flex space-x-2 items-center'>
+            <img src={Logo} alt="logo"/>
+            <p className='text-xl font-semibold'>SIMS PPOB</p>            
          </div>
+         <div>
+            <h1 className='text-xl font-semibold'>Lengkapi data untuk membuat akun</h1>
             <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
             <input type="text" name="namaDepan" id="namaDepan" placeholder="Nama Depan" required/>
             <input type="text" name="namaBelakang" id="namaBelakang" placeholder="Nama Belakang" required/>
@@ -32,6 +34,7 @@ function Register() {
             Registrasi
             </button>
             <p className="text-sm">Sudah punya akun? Login <a href='#login'>di sini</a></p>
+         </div>
       </div>
       <div className='logo'>
           <img src={IlustrasiLogin} alt="Ilustrasi Login" />

@@ -19,10 +19,11 @@ function Login() {
  <div id='login' className='container mx-auto'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
-         <div className='logo'>
-          <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
-          <h1 className='text-xl font-semibold'>Masuk atau buat akun untuk memulai</h1>
+         <div className='logo flex space-x-2 items-center'>
+          <img src={Logo} alt="logo"/>
+          <p className='text-xl font-semibold'>SIMS PPOB</p>          
          </div>
+          <h1 className='text-xl font-semibold'>Masuk atau buat akun untuk memulai</h1>
           <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
           <input type="password" name="buatPass" id="buatPass" placeholder="Masukkan Password Anda" required/>
           <input type="password" name="konfirmPass" id="konfirmPass" placeholder="Konfirmasi Password" required/>
