@@ -7,6 +7,7 @@ import TopUp from './components/TopUp'
 import Transaction from './components/Transaction'
 import TransactionDetail from './components/TransactionDetail'
 import Account from './components/Account'
+import EditProfile from './components/EditProfile'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Transaction/>
       <TransactionDetail/>
       <Account/>
+      <EditProfile/>
     </div>
   )
 }
