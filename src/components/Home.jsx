@@ -19,7 +19,7 @@ function Home() {
  <div id='home'>
     <div className='header mb-5'>
       <div className="">
-         <div className='simsLogo'>
+         <div className='logo'>
           <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
          </div>
           <a className='mx-5' href="">Top Up</a>

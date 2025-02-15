@@ -19,7 +19,7 @@ function Register() {
  <div id='register'>
     <div className='grid grid-cols-2'>
       <div className="registerForm w-3xs">
-         <div className='simsLogo'>
+         <div className='logo'>
             <img src={Logo} alt="logo"/><p className='font-semibold'>SIMS PPOB</p>
             <h1 className='text-xl font-semibold'>Lengkapi data untuk membuat akun</h1>
          </div>
