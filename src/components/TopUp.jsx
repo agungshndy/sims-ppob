@@ -31,17 +31,17 @@ function TopUp() {
               </div>
         </div>
     <div className='jumbotron grid grid-cols-2 my-5'>
-        <div>
-          <img src={Profile} alt="profile picture" />
-          <p>Selamat datang,</p>
-          <h2 className='text-xl font-semibold'>Kristanto Wibowo</h2>
+            <div className='m-3 text-xl'>
+              <img src={Profile} alt="profile picture" />
+              <p className='mt-3'>Selamat datang,</p>
+              <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
+            </div>
+            <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
+              <h1 className='mb-2'>Saldo anda</h1>
+              <p className='text-2xl mb-4'>Rp</p>
+              <p className='text-xs'>Tutup Saldo</p>
+            </div>
         </div>
-        <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
-          <h1 className='mb-2'>Saldo anda</h1>
-          <p className='text-2xl mb-4'>Rp</p>
-          <p className='text-xs'>Lihat Saldo</p>
-        </div>
-    </div>
     <div className='topup-feature my-10'>
         <p>Silahkan masukkan</p>
         <h1 className='text-xl font-semibold mb-5'>Nominal Top Up</h1>
