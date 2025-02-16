@@ -36,30 +36,30 @@ function TopUp() {
           <p>Selamat datang,</p>
           <h2 className='text-xl font-semibold'>Kristanto Wibowo</h2>
         </div>
-        <div className='bg-red-600 rounded'>
-          <h1>Saldo anda</h1>
-          <p>Rp</p>
-          <p>Tutup Saldo</p>
+        <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
+          <h1 className='mb-2'>Saldo anda</h1>
+          <p className='text-2xl mb-4'>Rp</p>
+          <p className='text-xs'>Lihat Saldo</p>
         </div>
     </div>
-    <div className='topup-feature my-5'>
+    <div className='topup-feature my-10'>
         <p>Silahkan masukkan</p>
-        <h1 className='text-xl font-semibold'>Nominal Top Up</h1>
-    <div className='grid grid-cols-2'>
-      <div className='grid grid-cols-1'>
-        <input className='border-1 my-5' type="text" name="nominal" id="nominal" placeholder='Masukkan nominal top up'/> 
-        <button className="hover:cursor-pointer rounded-md bg-gray-300 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+        <h1 className='text-xl font-semibold mb-5'>Nominal Top Up</h1>
+    <div className='grid grid-cols-3'>
+      <div className='grid grid-cols-1 col-span-2'>
+        <input className='border border-gray-200 p-2 mt-3 rounded-sm' type="text" name="nominal" id="nominal" placeholder='Masukkan nominal top up'/> 
+        <button className="hover:cursor-pointer my-5 rounded-md bg-gray-300 py-2 px-4 border border-transparent font-semibold text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
             Top Up
         </button> 
       </div>
-      <div>
+      <div className='flex items-center justify-items-center'>
         <div className='grid grid-cols-3'>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp10.000</button>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp20.000</button>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp50.000</button>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp100.000</button>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp250.000</button>
-          <button className='border-1 m-3 rounded hover:cursor-pointer'>Rp500.000</button>
+          <button className='p-2 border border-gray-200 ml-3 mt-1 mb-3 rounded hover:cursor-pointer'>Rp10.000</button>
+          <button className='p-2 border border-gray-200 mx-2 mt-1 mb-3 rounded hover:cursor-pointer'>Rp20.000</button>
+          <button className='p-2 border border-gray-200 mr-3 mt-1 mb-3 rounded hover:cursor-pointer'>Rp50.000</button>
+          <button className='p-2 border border-gray-200 ml-3 my-2 rounded hover:cursor-pointer'>Rp100.000</button>
+          <button className='p-2 border border-gray-200 m-2 rounded hover:cursor-pointer'>Rp250.000</button>
+          <button className='p-2 border border-gray-200 mr-3 my-2 rounded hover:cursor-pointer'>Rp500.000</button>
         </div>
       </div>
     </div>  

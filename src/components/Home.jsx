@@ -48,10 +48,10 @@ function Home() {
           </div>
     </div>
     <div className='jumbotron grid grid-cols-2 my-5'>
-        <div className='m-3 text-xl font-semibold'>
+        <div className='m-3 text-xl'>
           <img src={Profile} alt="profile picture" />
-          <p>Selamat datang,</p>
-          <p className='text-3xl'>Kristanto Wibowo</p>
+          <p className='mt-3'>Selamat datang,</p>
+          <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
         </div>
         <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
           <h1 className='mb-2'>Saldo anda</h1>
@@ -59,7 +59,7 @@ function Home() {
           <p className='text-xs'>Lihat Saldo</p>
         </div>
     </div>
-    <div className='feature grid grid-cols-12 justify-items-center mt-8'>
+    <div className='feature grid grid-cols-12 justify-items-center mt-10'>
         <div className='items-center text-center text-xs'>
           <img className='mb-2' src={PBB} alt="pbb" />
           <p>PBB</p>
@@ -93,7 +93,7 @@ function Home() {
           <p>Voucher Game</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className=' mb-2 mx-auto' src={Voucher} alt="voucher makanan" />
+          <img className='mb-2 mx-auto' src={Voucher} alt="voucher makanan" />
           <p>Voucher Makanan</p>
         </div>
         <div className='items-center text-center text-xs'>
