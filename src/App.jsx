@@ -12,7 +12,7 @@ import EditProfile from './components/EditProfile'
 function App() {
 
   return (
-    <div className='container mx-auto'>
+    <div>
       <Register/>
       <Login/>
       <Home/>

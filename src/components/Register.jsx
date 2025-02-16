@@ -4,7 +4,7 @@ import IlustrasiLogin from '../assets/Illustrasi Login.png'
 // import { useEffect, useState } from 'react';
 
 function Register() {
-   // const [user,setUser] = useState([]);
+   // const [users,setUsers] = useState([]);
 
    // const API_URL = 'http://localhost:8000/data';
    // useEffect(()=>{
@@ -13,27 +13,27 @@ function Register() {
 
    // async function getAllData(){
    //    const response = await axios.get(API_URL);
-   //    setUser(response.data);
+   //    setUsers(response.data);
    // }
  return (
  <div id='register' className='container mx-auto'>
-    <div className='grid grid-cols-2'>
-      <div className="registerForm w-3xs">
-         <div className='logo flex space-x-2 items-center'>
+    <div className='grid grid-cols-2 items-center'>
+      <div className="registerForm mx-auto">
+         <div className='logo mb-5 flex space-x-2 items-center justify-center'>
             <img src={Logo} alt="logo"/>
             <p className='text-xl font-semibold'>SIMS PPOB</p>            
          </div>
-         <div>
-            <h1 className='text-xl font-semibold'>Lengkapi data untuk membuat akun</h1>
-            <input type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
-            <input type="text" name="namaDepan" id="namaDepan" placeholder="Nama Depan" required/>
-            <input type="text" name="namaBelakang" id="namaBelakang" placeholder="Nama Belakang" required/>
-            <input type="password" name="buatPass" id="buatPass" placeholder="Buat Password" required/>
-            <input type="password" name="konfirmPass" id="konfirmPass" placeholder="Konfirmasi Password" required/>
-            <button className="hover:cursor-pointer rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+         <h1 className='text-xl font-semibold my-5'>Lengkapi data untuk membuat akun</h1>
+         <div className='flex flex-col justify-center'>
+            <input className='p-2 border-1 rounded-sm border-gray-200 my-5' type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
+            <input className='p-2 border-1 rounded-sm border-gray-200 mb-5' type="text" name="namaDepan" id="namaDepan" placeholder="Nama Depan" required/>
+            <input className='p-2 border-1 rounded-sm border-gray-200 mb-5' type="text" name="namaBelakang" id="namaBelakang" placeholder="Nama Belakang" required/>
+            <input className='p-2 border-1 rounded-sm border-gray-200 mb-5' type="password" name="buatPass" id="buatPass" placeholder="Buat Password" required/>
+            <input className='p-2 border-1 rounded-sm border-gray-200 mb-8' type="password" name="konfirmPass" id="konfirmPass" placeholder="Konfirmasi Password" required/>
+            <button className="hover:cursor-pointer rounded-sm bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
             Registrasi
             </button>
-            <p className="text-sm">Sudah punya akun? Login <a href='#login'>di sini</a></p>
+            <p className="text-xs mt-3 text-center">Sudah punya akun? Login <a className='text-red-600 font-semibold' href='#login'>di sini</a></p>
          </div>
       </div>
       <div className='logo'>
