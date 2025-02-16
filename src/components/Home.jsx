@@ -48,33 +48,72 @@ function Home() {
           </div>
     </div>
     <div className='jumbotron grid grid-cols-2 my-5'>
-        <div>
+        <div className='m-3 text-xl font-semibold'>
           <img src={Profile} alt="profile picture" />
           <p>Selamat datang,</p>
-          <h2 className='font-semibold'>Kristanto Wibowo</h2>
+          <p className='text-3xl'>Kristanto Wibowo</p>
         </div>
-        <div className='bg-red-600 rounded'>
-          <h1>Saldo anda</h1>
-          <p>Rp</p>
-          <p>Lihat Saldo</p>
+        <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
+          <h1 className='mb-2'>Saldo anda</h1>
+          <p className='text-2xl mb-4'>Rp</p>
+          <p className='text-xs'>Lihat Saldo</p>
         </div>
     </div>
-    <div className='feature flex flex-auto'>
-        <img src={PBB} alt="pbb" />PBB
-        <img src={Listrik} alt="listrik" />Listrik
-        <img src={Pulsa} alt="pulsa" />Pulsa
-        <img src={PDAM} alt="pdam" />PDAM
-        <img src={PGN} alt="pgn" />PGN
-        <img src={TV} alt="televisi" />Televisi
-        <img src={Musik} alt="musik" />Musik
-        <img src={Game} alt="voucher game" />Voucher Game
-        <img src={Voucher} alt="voucher makanan" />Voucher Makanan
-        <img src={Kurban} alt="kurban" />Kurban
-        <img src={Zakat} alt="zakat" />Zakat
-        <img src={Paket} alt="paket data" />Paket Data
+    <div className='feature grid grid-cols-12 justify-items-center mt-8'>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={PBB} alt="pbb" />
+          <p>PBB</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Listrik} alt="listrik" />
+          <p>Listrik</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Pulsa} alt="pulsa" />
+          <p>Pulsa</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={PDAM} alt="pdam" />
+          <p>PDAM</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={PGN} alt="pgn" />
+          <p>PGN</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={TV} alt="televisi" />
+          <p>Televisi</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Musik} alt="musik" />
+          <p>Musik</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2 mx-auto' src={Game} alt="voucher game" />
+          <p>Voucher Game</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className=' mb-2 mx-auto' src={Voucher} alt="voucher makanan" />
+          <p>Voucher Makanan</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Kurban} alt="kurban" />
+          <p>Kurban</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Zakat} alt="zakat" />
+          <p>Zakat</p>
+        </div>
+        <div className='items-center text-center text-xs'>
+          <img className='mb-2' src={Paket} alt="paket data" />
+          <p>Paket Data</p>
+        </div>
     </div>
     <div className='promo my-5'>
-        <div className='flex'>
+        <div className='font-semibold text-md mt-7 mb-4'>
+          <p>Temukan promo menarik</p>
+        </div>
+        <div className='flex gap-7'>
           <img src={Banner1} alt="banner 1" />
           <img src={Banner2} alt="banner 2" />
           <img src={Banner3} alt="banner 3" />

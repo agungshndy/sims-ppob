@@ -19,11 +19,11 @@ function Login() {
  <div id='login' className='container mx-auto'>
     <div className='grid grid-cols-2 items-center'>
       <div className="registerForm mx-auto">
-         <div className='logo flex space-x-2 items-center'>
+         <div className='logo flex space-x-2 justify-center items-center'>
           <img src={Logo} alt="logo"/>
           <p className='text-xl font-semibold'>SIMS PPOB</p>          
          </div>
-          <h1 className='text-xl font-semibold'>Masuk atau buat akun untuk memulai</h1>
+          <h1 className='text-xl font-semibold my-5'>Masuk atau buat akun untuk memulai</h1>
           <div className='flex flex-col'>
             <input className='p-2 border rounded-sm border-gray-200 my-5 outline-blue-600 text-sm' type="email" name="email" id="email" placeholder="Masukkan E-mail Anda" required/>
             <div className="relative flex items-center mb-5">
