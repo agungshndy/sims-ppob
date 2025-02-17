@@ -31,19 +31,19 @@ function TransactionDetail() {
               </div>
     </div>
     <div className='jumbotron grid grid-cols-2 my-5'>
-        <div>
-          <img src={Profile} alt="profile picture" />
-          <p>Selamat datang,</p>
-          <h2 className='text-xl font-semibold'>Kristanto Wibowo</h2>
-        </div>
-        <div className='bg-red-600 rounded'>
-          <h1>Saldo anda</h1>
-          <p>Rp</p>
-          <p>Tutup Saldo</p>
-        </div>
+                <div className='m-3 text-xl'>
+                  <img src={Profile} alt="profile picture" />
+                  <p className='mt-3'>Selamat datang,</p>
+                  <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
+                </div>
+                <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
+                  <h1 className='mb-2'>Saldo anda</h1>
+                  <p className='text-2xl mb-4'>Rp</p>
+                  <p className='text-xs'>Lihat Saldo</p>
+                </div>
     </div>
     <div className='transaction-detail my-5'>
-        <p className='font-md font-semibold'>Semua Transaksi</p>
+        <p className='font-md font-semibold mt-10 mb-5'>Semua Transaksi</p>
       <div className='grid grid-cols-1'>
         <div className='p-2 border-1 rounded flex justify-between my-2'>
           <div className=''>
