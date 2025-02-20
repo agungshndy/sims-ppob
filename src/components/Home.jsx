@@ -19,7 +19,7 @@ import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
-import { UserContext } from './UserContext'
+import { UserContext } from '../contexts/UserContext'
 
 const Home = ()=> {
 

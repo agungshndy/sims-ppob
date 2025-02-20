@@ -2,12 +2,19 @@ import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { UserContext } from './UserContext'
+import { UserContext } from '../contexts/UserContext'
 
 function Account(){
     const navigate = useNavigate()
 
     const { user } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);
+
+    const handleLogout = ()=> {
+        setUser(null);
+        localStorage.removeItem('user');
+        navigate('/');
+    }
 
     return (
         <div id='account' className='container mx-auto'>
@@ -36,26 +43,26 @@ function Account(){
                 <div className='mb-3'>
                     <label htmlFor="email">Email</label>
                     <div className='rounded border-1 p-2 mt-2'>
-                        <input type="email" name="email" id="email" placeholder='email@gmail.com'/>
+                        <input className='w-full' type="email" name="email" id="email" value={user?.email || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaDepan">Nama Depan</label>
                     <div className='rounded border-1 p-2 mt-2'>
-                        <input type="text" name="namaDepan" id="namaDepan" placeholder='Kristanto'/>
+                        <input className='w-full' type="text" name="namaDepan" id="namaDepan" value={user?.firstname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaBelakang">Nama Belakang</label>
                     <div className='rounded border-1 p-2 mt-2'>
-                        <input type="text" name="namaBelakang" id="namaBelakang" placeholder='Wibowo'/>
+                        <input className='w-full' type="text" name="namaBelakang" id="namaBelakang" value={user?.lastname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 my-2'>
                     <button onClick={()=> navigate('/editprofile')} className="hover:cursor-pointer font-semibold rounded-md bg-white py-2 px-4 my-3 border border-transparent text-center text-sm text-red-800 hover:text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Edit Profile
                     </button>
-                    <button onClick={()=> navigate('/')} className="hover:cursor-pointer font-semibold rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                    <button onClick={handleLogout} className="hover:cursor-pointer font-semibold rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Logout
                     </button>
                 </div>    

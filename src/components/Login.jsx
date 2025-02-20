@@ -1,13 +1,16 @@
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
 import Logo from '../assets/Logo.png'
 import IlustrasiLogin from '../assets/Illustrasi Login.png'
+import { UserContext } from '../contexts/UserContext';
 
 const Login = ()=> {
 
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+
+  const { setUser } = useContext(UserContext)
 
   const handleLogin = async ()=> {
     try {
@@ -19,6 +22,7 @@ const Login = ()=> {
       if (user) {
         alert("Login Success!");
         localStorage.setItem('user', JSON.stringify(user));
+        setUser(user);
         navigate('/home');
       } else {
         alert("Invalid email address or password!");
@@ -61,6 +65,7 @@ const Login = ()=> {
               placeholder="Masukkan Password Anda"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e)=> e.key === 'Enter' && handleLogin()}
               required
               />
               <button 

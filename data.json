@@ -5,10 +5,9 @@
     },
     {
       "id": "d094",
-      "email": "budiharyanto@gmail.com",
-      "firstname": "budi",
-      "lastname": "haryanto",
-      "password": "budi123"
+      "email": "budiantosiregar@gmail.com",
+      "firstname": "Budianto",
+      "lastname": "Siregar"
     },
     {
       "id": "d828",
@@ -23,6 +22,12 @@
       "firstname": "asd",
       "lastname": "asd",
       "password": "12345"
+    },
+    {
+      "id": "1875",
+      "email": "ridho123@gmail.com",
+      "firstname": "ridho",
+      "lastname": "pratama"
     }
   ]
 }
