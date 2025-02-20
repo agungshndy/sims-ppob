@@ -1,9 +1,10 @@
 import Logo from '../assets/Logo.png'
 import IlustrasiLogin from '../assets/Illustrasi Login.png'
+import { useNavigate } from 'react-router-dom'
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
-function Login() {
+const Login = ()=> {
    // const [user,setUser] = useState([]);
 
    // const API_URL = 'http://localhost:8000/data';
@@ -15,6 +16,9 @@ function Login() {
    //    const response = await axios.get(API_URL);
    //    setUser(response.data);
    // }
+
+  const navigate = useNavigate()
+
  return (
  <div id='login' className='container mx-auto'>
     <div className='grid grid-cols-2 items-center'>
@@ -40,12 +44,12 @@ function Login() {
                       data-original="#000000"></path>
                 </svg>
               </div>
-              <button className="hover:cursor-pointer rounded-md bg-red-600 mb-2 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              <button className="hover:cursor-pointer rounded-md bg-red-600 mb-2 py-2 px-4 border border-transparent font-semibold text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                 Masuk
               </button>
             </div>
           
-          <p className="mt-3 text-sm text-center">Belum punya akun? Registrasi <a className='font-semibold text-red-600' href="#register">di sini</a></p>
+          <p className="mt-3 text-xs text-center">Belum punya akun? Registrasi <button onClick={()=> navigate('/register')} className='hover:cursor-pointer text-red-600 font-semibold'>di sini</button></p>
       </div>
       <div className='logo'>
           <img src={IlustrasiLogin} alt="Ilustrasi Login" />

@@ -1,9 +1,11 @@
 import Logo from '../assets/Logo.png'
 import IlustrasiLogin from '../assets/Illustrasi Login.png'
+import { useNavigate } from 'react-router-dom'
+// import LoginPage from '../../Pages/LoginPage';
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
-function Register() {
+const Register = ()=> {
    // const [users,setUsers] = useState([]);
 
    // const API_URL = 'http://localhost:8000/data';
@@ -15,6 +17,9 @@ function Register() {
    //    const response = await axios.get(API_URL);
    //    setUsers(response.data);
    // }
+
+   const navigate = useNavigate()
+
  return (
  <div id='register' className='container mx-auto'>
     <div className='grid grid-cols-2 items-center'>
@@ -53,7 +58,7 @@ function Register() {
             <button className="hover:cursor-pointer rounded-sm bg-red-600 py-2 px-4 border border-transparent font-semibold text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
             Registrasi
             </button>
-            <p className="text-xs mt-3 text-center">Sudah punya akun? Login <a className='text-red-600 font-semibold' href='#login'>di sini</a></p>
+            <p className="text-xs mt-3 text-center">Sudah punya akun? Login <button onClick={()=> navigate('/')} className='hover:cursor-pointer text-red-600 font-semibold'>di sini</button></p>
          </div>
       </div>
       <div className='logo'>
