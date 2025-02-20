@@ -1,9 +1,27 @@
 {
-  "data": [
+  "users": [
     {
-      "id": "58eb",
-      "name": "Budi",
-      "email": "budi@gmail.com"
+      "id": "70e9"
+    },
+    {
+      "id": "d094",
+      "email": "budiharyanto@gmail.com",
+      "firstname": "budi",
+      "lastname": "haryanto",
+      "password": "budi123"
+    },
+    {
+      "id": "d828",
+      "email": "andisaputra@gmail.com",
+      "firstname": "andi",
+      "lastname": "saputra",
+      "password": "andi123"
+    },
+    {
+      "id": "be82"
+    },
+    {
+      "id": "06a5"
     }
   ]
 }
