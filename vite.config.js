@@ -9,6 +9,6 @@ export default defineConfig({
     tailwindcss()
   ],
   base: [
-    '/sims-ppob'
+    '/sims-ppob/'
   ]
 })
