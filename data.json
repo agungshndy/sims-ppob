@@ -16,6 +16,13 @@
       "firstname": "andi",
       "lastname": "saputra",
       "password": "andi123"
+    },
+    {
+      "id": "aea6",
+      "email": "asd@gmail.com",
+      "firstname": "asd",
+      "lastname": "asd",
+      "password": "12345"
     }
   ]
 }
