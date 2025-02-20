@@ -23,7 +23,7 @@ function EditProfile(){
 
     const handleSubmit = async ()=> {
         try {
-            const API_URL = `http://localhost:8000/users/${formData.id}`
+            const API_URL = `https://67b779ea2bddacfb270f1206.mockapi.io/api/sims-ppob/users/${formData.id}`
 
             if (!formData.id) {
                 alert("User ID is missing!");

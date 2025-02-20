@@ -15,7 +15,7 @@ const Register = ()=> {
       konfirmPassword:"",
    });
 
-   const API_URL = "http://localhost:8000/users";
+   const API_URL = "https://67b779ea2bddacfb270f1206.mockapi.io/api/sims-ppob/users";
 
    const handleChange = (e)=> {
       setFormData({...formData,[e.target.name]: e.target.value});
