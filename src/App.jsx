@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from '../Pages/HomePage'
 import AccountPage from '../Pages/AccountPage'
 import TransactionPage from '../Pages/TransactionPage'
+import NotFound from '../Pages/NotFound'
 
 const App = ()=> {
   return (
@@ -24,6 +25,7 @@ const App = ()=> {
         <Route path="/home" element={<HomePage/>} />
         <Route path="/account" element={<AccountPage/>} />
         <Route path="/transaction" element={<TransactionPage/>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
   )
