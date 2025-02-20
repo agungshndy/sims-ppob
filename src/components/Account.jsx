@@ -49,7 +49,7 @@ function Account(){
                     <button onClick={()=> navigate('/editprofile')} className="hover:cursor-pointer font-semibold rounded-md bg-white py-2 px-4 my-3 border border-transparent text-center text-sm text-red-800 hover:text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Edit Profile
                     </button>
-                    <button className="hover:cursor-pointer font-semibold rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                    <button onClick={()=> navigate('/')} className="hover:cursor-pointer font-semibold rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Logout
                     </button>
                 </div>    
