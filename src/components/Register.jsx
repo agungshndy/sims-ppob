@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import axios from 'axios';
 import Logo from '../assets/Logo.png'
 import IlustrasiLogin from '../assets/Illustrasi Login.png'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios';
-import { useState } from 'react';
+
+
 
 const Register = ()=> {
    const [formData,setFormData] = useState({
