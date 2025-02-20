@@ -17,13 +17,13 @@ const Register = ()=> {
 
    const API_URL = "http://localhost:8000/users";
 
-   const handleChange = (e) => {
+   const handleChange = (e)=> {
       setFormData({...formData,[e.target.name]: e.target.value});
    };
 
-   const handleSubmit = async () => {
+   const handleSubmit = async ()=> {
       if (formData.password !== formData.konfirmPassword) {
-        alert("Password and Confirm Password do not match!");
+        alert("Password and Konfirm Password tidak sama!");
         return;
       }
   

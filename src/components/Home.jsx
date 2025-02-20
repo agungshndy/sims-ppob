@@ -18,23 +18,14 @@ import Banner3 from '../assets/Banner 3.png'
 import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
 import { useNavigate } from 'react-router-dom'
-// import axios from 'axios';
-// import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from './UserContext'
 
-function Home() {
-   // const [user,setUser] = useState([]);
-
-   // const API_URL = 'http://localhost:8000/data';
-   // useEffect(()=>{
-   //    getAllData();
-   // },[]);
-
-   // async function getAllData(){
-   //    const response = await axios.get(API_URL);
-   //    setUser(response.data);
-   // }
+const Home = ()=> {
 
   const navigate = useNavigate()
+
+  const { user } = useContext(UserContext);
 
   return (
  <div id='home' className='container mx-auto'>
@@ -55,12 +46,14 @@ function Home() {
         <div className='m-3 text-xl'>
           <img src={Profile} alt="profile picture" />
           <p className='mt-3'>Selamat datang,</p>
-          <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
+          <p className='text-3xl font-semibold'>
+            {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
+          </p>
         </div>
-        <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
-          <h1 className='mb-2'>Saldo anda</h1>
-          <p className='text-2xl mb-4'>Rp</p>
-          <p className='text-xs'>Lihat Saldo</p>
+        <div className='p-5 text-white font-semibold bg-red-600 rounded-xl'>
+          <h1 className='mb-4'>Saldo anda</h1>
+          <p className='text-2xl mb-7'>Rp</p>
+          <button className='hover:cursor-pointer text-xs'>Lihat Saldo</button>
         </div>
     </div>
     <div className='feature grid grid-cols-12 justify-items-center mt-10'>

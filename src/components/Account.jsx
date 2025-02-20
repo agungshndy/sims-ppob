@@ -1,9 +1,13 @@
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from './UserContext'
 
 function Account(){
     const navigate = useNavigate()
+
+    const { user } = useContext(UserContext);
 
     return (
         <div id='account' className='container mx-auto'>
@@ -23,7 +27,9 @@ function Account(){
             <div className='flex justify-center'>
                 <div className='grid grid-rows-2'>    
                     <img className='w-[100px] mx-auto' src={Profile} alt="profile picture" />        
-                    <p className='text-xl font-semibold mt-2'>Kristanto Wibowo</p>
+                    <p className='text-xl font-semibold mt-2 text-center'>
+                        {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
+                    </p>
                 </div>
             </div>
             <div className='account-detail'>
