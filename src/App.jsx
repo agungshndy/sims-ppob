@@ -20,7 +20,7 @@ import ProfilePage from '../Pages/ProfilePage'
 
 const App = ()=> {
   return (
-    <Router>
+    <Router basename='/sims-ppob'>
       <Routes>
         <Route path="/" element={<LoginPage/>} />
         <Route path="/register" element={<RegisterPage/>} />
