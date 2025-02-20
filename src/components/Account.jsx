@@ -1,19 +1,22 @@
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
+import { useNavigate } from 'react-router-dom';
 
 function Account(){
+    const navigate = useNavigate()
+
     return (
         <div id='account' className='container mx-auto'>
             <div className='header mb-5'>
                       <div className="flex justify-between border-b-1 border-b-gray-100 p-2">
                          <div className='logo flex space-x-2 items-center'>
                           <img src={Logo} alt="logo"/>
-                          <p className='text-md font-semibold'>SIMS PPOB</p>
+                          <button onClick={()=> navigate('/home')} className='hover:cursor-pointer font-semibold'>SIMS PPOB</button>
                          </div>
                          <div>
-                          <a className='mx-5' href="">Top Up</a>
-                          <a className='mx-5' href="">Transaction</a>
-                          <a className='mx-5' href="">Akun</a>
+                          <button onClick={()=> navigate('/topup')} className='hover:cursor-pointer mx-5'>Top Up</button>
+                          <button onClick={()=> navigate('/transaction')} className='hover:cursor-pointer mx-5'>Transaction</button>
+                          <button onClick={()=> navigate('/account')} className='hover:cursor-pointer mx-5'>Akun</button>
                         </div>
                       </div>
                 </div>
@@ -43,10 +46,10 @@ function Account(){
                     </div>
                 </div>
                 <div className='grid grid-cols-1 my-2'>
-                    <button className="hover:cursor-pointer rounded-md bg-white py-2 px-4 my-3 border border-transparent text-center text-sm text-red-800 hover:text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                    <button onClick={()=> navigate('/editprofile')} className="hover:cursor-pointer font-semibold rounded-md bg-white py-2 px-4 my-3 border border-transparent text-center text-sm text-red-800 hover:text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Edit Profile
                     </button>
-                    <button className="hover:cursor-pointer rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                    <button className="hover:cursor-pointer font-semibold rounded-md bg-red-600 py-2 px-4 my-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                         Logout
                     </button>
                 </div>    

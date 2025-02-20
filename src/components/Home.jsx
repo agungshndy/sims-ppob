@@ -17,6 +17,7 @@ import Banner2 from '../assets/Banner 2.png'
 import Banner3 from '../assets/Banner 3.png'
 import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
+import { useNavigate } from 'react-router-dom'
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
@@ -32,6 +33,9 @@ function Home() {
    //    const response = await axios.get(API_URL);
    //    setUser(response.data);
    // }
+
+  const navigate = useNavigate()
+
   return (
  <div id='home' className='container mx-auto'>
     <div className='header mb-5'>
@@ -41,9 +45,9 @@ function Home() {
               <p className='text-md font-semibold'>SIMS PPOB</p>
              </div>
              <div>
-              <a className='mx-5' href="">Top Up</a>
-              <a className='mx-5' href="">Transaction</a>
-              <a className='mx-5' href="">Akun</a>
+              <button onClick={()=> navigate('/topup')} className='hover:cursor-pointer mx-5'>Top Up</button>
+              <button onClick={()=> navigate('/transaction')} className='hover:cursor-pointer mx-5'>Transaction</button>
+              <button onClick={()=> navigate('/account')} className='hover:cursor-pointer mx-5'>Akun</button>
             </div>
           </div>
     </div>

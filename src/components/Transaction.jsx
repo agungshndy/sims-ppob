@@ -1,6 +1,7 @@
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import Listrik from '../assets/Listrik.png'
+import { useNavigate } from 'react-router-dom'
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
@@ -16,18 +17,21 @@ function Transaction() {
    //    const response = await axios.get(API_URL);
    //    setUser(response.data);
    // }
+
+  const navigate = useNavigate()
+
   return (
  <div id='transaction' className='container mx-auto'>
     <div className='header mb-5'>
               <div className="flex justify-between border-b-1 border-b-gray-100 p-2">
                  <div className='logo flex space-x-2 items-center'>
                   <img src={Logo} alt="logo"/>
-                  <p className='text-md font-semibold'>SIMS PPOB</p>
+                  <button onClick={()=> navigate('/home')} className='hover:cursor-pointer font-semibold'>SIMS PPOB</button>
                  </div>
                  <div>
-                  <a className='mx-5' href="">Top Up</a>
-                  <a className='mx-5' href="">Transaction</a>
-                  <a className='mx-5' href="">Akun</a>
+                  <button onClick={()=> navigate('/topup')} className='hover:cursor-pointer mx-5'>Top Up</button>
+                  <button onClick={()=> navigate('/transaction')} className='hover:cursor-pointer mx-5'>Transaction</button>
+                  <button onClick={()=> navigate('/account')} className='hover:cursor-pointer mx-5'>Akun</button>
                 </div>
               </div>
     </div>
