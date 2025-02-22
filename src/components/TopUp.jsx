@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../contexts/UserContext';
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
@@ -18,6 +20,7 @@ function TopUp() {
    // }
 
   const navigate = useNavigate()
+  const { user } = useContext(UserContext)
 
   return (
  <div id='topup' className='container mx-auto'>
@@ -38,7 +41,9 @@ function TopUp() {
             <div className='m-3 text-xl'>
               <img src={Profile} alt="profile picture" />
               <p className='mt-3'>Selamat datang,</p>
-              <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
+              <p className='text-3xl font-semibold'>
+              {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
+              </p>
             </div>
             <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
               <h1 className='mb-2'>Saldo anda</h1>

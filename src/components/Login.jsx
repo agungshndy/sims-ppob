@@ -21,7 +21,7 @@ const Login = ()=> {
 
       if (user) {
         alert("Login Success!");
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem("userId", user.id);
         setUser(user);
         navigate('/home');
       } else {

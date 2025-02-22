@@ -2,6 +2,8 @@ import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import Listrik from '../assets/Listrik.png'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { UserContext } from '../contexts/UserContext'
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
@@ -19,6 +21,7 @@ function Transaction() {
    // }
 
   const navigate = useNavigate()
+  const { user } = useContext(UserContext)
 
   return (
  <div id='transaction' className='container mx-auto'>
@@ -39,7 +42,9 @@ function Transaction() {
             <div className='m-3 text-xl'>
               <img src={Profile} alt="profile picture" />
               <p className='mt-3'>Selamat datang,</p>
-              <p className='text-3xl font-semibold'>Kristanto Wibowo</p>
+              <p className='text-3xl font-semibold'>
+              {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
+              </p>
             </div>
             <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
               <h1 className='mb-2'>Saldo anda</h1>

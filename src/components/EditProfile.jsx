@@ -34,7 +34,6 @@ function EditProfile(){
 
             if (response.status === 200) {
                 setUser(formData);
-                localStorage.setItem('user', JSON.stringify(formData));
                 alert("Profile berhasil diperbarui!");
                 navigate('/account');
             }
