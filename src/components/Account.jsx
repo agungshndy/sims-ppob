@@ -42,20 +42,20 @@ function Account(){
             <div className='account-detail'>
                 <div className='mb-3'>
                     <label htmlFor="email">Email</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="email" name="email" id="email" value={user?.email || ''} readOnly/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="email" name="email" id="email" value={user?.email || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaDepan">Nama Depan</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="text" name="namaDepan" id="namaDepan" value={user?.firstname || ''} readOnly/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="namaDepan" id="namaDepan" value={user?.firstname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaBelakang">Nama Belakang</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="text" name="namaBelakang" id="namaBelakang" value={user?.lastname || ''} readOnly/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="namaBelakang" id="namaBelakang" value={user?.lastname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 my-2'>

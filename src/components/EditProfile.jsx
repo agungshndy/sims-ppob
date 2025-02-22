@@ -70,20 +70,20 @@ function EditProfile(){
             <div className='account-detail'>
                 <div className='mb-3'>
                     <label htmlFor="email">Email</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="email" name="email" id="email" value={formData.email} onChange={handleChange}/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="email" name="email" id="email" value={formData.email} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaDepan">Nama Depan</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="text" name="firstname" id="namaDepan" value={formData.firstname} onChange={handleChange}/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="firstname" id="namaDepan" value={formData.firstname} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaBelakang">Nama Belakang</label>
-                    <div className='rounded border-1 p-2 mt-2'>
-                        <input className='w-full' type="text" name="lastname" id="namaBelakang" value={formData.lastname} onChange={handleChange}/>
+                    <div>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="lastname" id="namaBelakang" value={formData.lastname} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 my-2'>
