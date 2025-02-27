@@ -43,19 +43,19 @@ function Account(){
                 <div className='mb-3'>
                     <label htmlFor="email">Email</label>
                     <div>
-                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="email" name="email" id="email" value={user?.email || ''} readOnly/>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2 text-gray-500' type="email" name="email" id="email" value={user?.email || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaDepan">Nama Depan</label>
                     <div>
-                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="namaDepan" id="namaDepan" value={user?.firstname || ''} readOnly/>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2 text-gray-500' type="text" name="namaDepan" id="namaDepan" value={user?.firstname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="namaBelakang">Nama Belakang</label>
                     <div>
-                        <input className='w-full rounded border border-gray-400 p-2 mt-2' type="text" name="namaBelakang" id="namaBelakang" value={user?.lastname || ''} readOnly/>
+                        <input className='w-full rounded border border-gray-400 p-2 mt-2 text-gray-500' type="text" name="namaBelakang" id="namaBelakang" value={user?.lastname || ''} readOnly/>
                     </div>
                 </div>
                 <div className='grid grid-cols-1 my-2'>
