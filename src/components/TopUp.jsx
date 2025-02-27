@@ -45,10 +45,12 @@ function TopUp() {
               {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
               </p>
             </div>
-            <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
-              <h1 className='mb-2'>Saldo anda</h1>
+            <div className='p-5 text-white font-semibold bg-red-600 rounded-xl items-center'>
+              <h1 className='mb-5'>Saldo anda</h1>
               <p className='text-2xl mb-4'>Rp</p>
-              <p className='text-xs'>Tutup Saldo</p>
+              <button className='hover:cursor-pointer text-xs'>
+              Tutup Saldo
+              </button>
             </div>
         </div>
     <div className='topup-feature my-10'>
@@ -63,12 +65,24 @@ function TopUp() {
       </div>
       <div className='flex items-center justify-items-center'>
         <div className='grid grid-cols-3'>
-          <button className='p-2 border border-gray-200 ml-3 mt-1 mb-3 rounded hover:cursor-pointer'>Rp10.000</button>
-          <button className='p-2 border border-gray-200 mx-2 mt-1 mb-3 rounded hover:cursor-pointer'>Rp20.000</button>
-          <button className='p-2 border border-gray-200 mr-3 mt-1 mb-3 rounded hover:cursor-pointer'>Rp50.000</button>
-          <button className='p-2 border border-gray-200 ml-3 my-2 rounded hover:cursor-pointer'>Rp100.000</button>
-          <button className='p-2 border border-gray-200 m-2 rounded hover:cursor-pointer'>Rp250.000</button>
-          <button className='p-2 border border-gray-200 mr-3 my-2 rounded hover:cursor-pointer'>Rp500.000</button>
+          <button className='p-2 border border-gray-200 ml-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp10.000
+          </button>
+          <button className='p-2 border border-gray-200 mx-2 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp20.000
+          </button>
+          <button className='p-2 border border-gray-200 mr-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp50.000
+          </button>
+          <button className='p-2 border border-gray-200 ml-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp100.000
+          </button>
+          <button className='p-2 border border-gray-200 m-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp250.000
+          </button>
+          <button className='p-2 border border-gray-200 mr-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+            Rp500.000
+          </button>
         </div>
       </div>
     </div>  
