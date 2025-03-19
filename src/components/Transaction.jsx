@@ -46,10 +46,12 @@ function Transaction() {
               {user ? `${user.firstname} ${user.lastname}` : 'Guest'}
               </p>
             </div>
-            <div className='p-5 text-white font-semibold bg-red-600 rounded-xl grid items-center'>
-              <h1 className='mb-2'>Saldo anda</h1>
+            <div className='p-5 text-white font-semibold bg-red-600 rounded-xl items-center'>
+              <h1 className='mb-5'>Saldo anda</h1>
               <p className='text-2xl mb-4'>Rp</p>
-              <p className='text-xs'>Lihat Saldo</p>
+              <button className='hover:cursor-pointer text-xs'>
+                Lihat Saldo
+              </button>
             </div>
     </div>
     <div className='topup-feature my-5'>
