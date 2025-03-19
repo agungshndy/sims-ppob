@@ -49,7 +49,7 @@ function Transaction() {
             <div className='p-5 text-white font-semibold bg-red-600 rounded-xl items-center'>
               <h1 className='mb-5'>Saldo anda</h1>
               <p className='text-2xl mb-4'>Rp</p>
-              <button className='hover:cursor-pointer text-xs'>
+              <button className='hover:cursor-pointer text-md mt-2'>
                 Lihat Saldo
               </button>
             </div>
