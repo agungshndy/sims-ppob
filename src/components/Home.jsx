@@ -17,7 +17,7 @@ import Banner2 from '../assets/Banner 2.png'
 import Banner3 from '../assets/Banner 3.png'
 import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext'
 
@@ -58,51 +58,51 @@ const Home = ()=> {
     </div>
     <div className='feature grid grid-cols-12 justify-items-center mt-10'>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={PBB} alt="pbb" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PBB} alt="pbb" /></Link>
           <p>PBB</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Listrik} alt="listrik" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Listrik} alt="listrik" /></Link>
           <p>Listrik</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Pulsa} alt="pulsa" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Pulsa} alt="pulsa" /></Link>
           <p>Pulsa</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={PDAM} alt="pdam" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PDAM} alt="pdam" /></Link>
           <p>PDAM</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={PGN} alt="pgn" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PGN} alt="pgn" /></Link>
           <p>PGN</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={TV} alt="televisi" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={TV} alt="televisi" /></Link>
           <p>Televisi</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Musik} alt="musik" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Musik} alt="musik" /></Link>
           <p>Musik</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2 mx-auto' src={Game} alt="voucher game" />
+          <Link to="/transaction"><img className='mb-2 mx-auto hover:cursor-pointer' src={Game} alt="voucher game" /></Link>
           <p>Voucher Game</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2 mx-auto' src={Voucher} alt="voucher makanan" />
+          <Link to="/transaction"><img className='mb-2 mx-auto hover:cursor-pointer' src={Voucher} alt="voucher makanan" /></Link>
           <p>Voucher Makanan</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Kurban} alt="kurban" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Kurban} alt="kurban" /></Link>
           <p>Kurban</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Zakat} alt="zakat" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Zakat} alt="zakat" /></Link>
           <p>Zakat</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <img className='mb-2' src={Paket} alt="paket data" />
+          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Paket} alt="paket data" /></Link>
           <p>Paket Data</p>
         </div>
     </div>
