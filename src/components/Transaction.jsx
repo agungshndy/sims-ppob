@@ -1,7 +1,18 @@
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import Listrik from '../assets/Listrik.png'
-import { useNavigate } from 'react-router-dom'
+import PBB from '../assets/PBB.png'
+import Pulsa from '../assets/Pulsa.png'
+import PDAM from '../assets/PDAM.png'
+import PGN from '../assets/PGN.png'
+import TV from '../assets/Televisi.png'
+import Musik from '../assets/Musik.png'
+import Game from '../assets/Game.png'
+import Voucher from '../assets/Voucher Makanan.png'
+import Kurban from '../assets/Kurban.png'
+import Zakat from '../assets/Zakat.png'
+import Paket from '../assets/Paket Data.png'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { UserContext } from '../contexts/UserContext'
 // import axios from 'axios';
@@ -19,6 +30,65 @@ function Transaction() {
    //    const response = await axios.get(API_URL);
    //    setUser(response.data);
    // }
+
+  const serviceMap = {
+    pbb : {
+      label : 'PBB',
+      icon : PBB
+    },
+    listrik : {
+      label : 'Listrik',
+      icon : Listrik
+      },
+    pulsa : {
+      label : 'Pulsa Prabayar',
+      icon : Pulsa
+    },
+    pdam : {
+      label : 'PDAM',
+      icon : PDAM
+    },
+    pgn : {
+      label : 'PGN',
+      icon : PGN
+    },
+    televisi : {
+      label : 'Televisi',
+      icon : TV
+    },
+    musik : {
+      label : 'Musik',
+      icon : Musik
+    },
+    vouchergame : {
+      label : 'Voucher Game',
+      icon : Game
+    },
+    vouchermakanan : {
+      label : 'Voucher Makanan',
+      icon : Voucher
+    },
+    kurban : {
+      label : 'Kurban',
+      icon : Kurban
+    },
+    zakat : {
+      label : 'Zakat',
+      icon : Zakat
+    },
+    paketdata : {
+      label : 'Paket Data',
+      icon : Paket
+    }
+  }
+  // const selectedService = serviceMap[service] || {
+  //   label: 'Pilih Menu',
+  //   icon: 'null'
+  // }
+
+  const location = useLocation();
+  const queryParams= new URLSearchParams(location.search);
+  const service = queryParams.get('service');
 
   const navigate = useNavigate()
   const { user } = useContext(UserContext)
@@ -57,8 +127,12 @@ function Transaction() {
     <div className='topup-feature my-5'>
         <p className='mb-3'>Pembayaran</p>
         <div className='flex space-x-2 mb-7'>
-          <img className='w-[25px]' src={Listrik} alt="listrik icon" />
-          <h1 className='text-md font-semibold'>Listrik Prabayar</h1>
+          {serviceMap[service] && (
+          <div className='flex space-x-2 mb-7'>
+            <img className='w-[25px]' src={serviceMap[service].icon} alt={service} />
+            <h1 className='text-md font-semibold'>{serviceMap[service].label}</h1>
+          </div>
+          )}
         </div>
     <div className='grid grid-cols-1'>
         <input className='border border-gray-200 p-2 my-5 rounded-sm' type="text" name="nominal" id="nominal" placeholder='10.000'/> 

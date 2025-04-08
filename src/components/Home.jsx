@@ -58,51 +58,51 @@ const Home = ()=> {
     </div>
     <div className='feature grid grid-cols-12 justify-items-center mt-10'>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PBB} alt="pbb" /></Link>
+          <Link to="/transaction?service=pbb"><img className='mb-2 hover:cursor-pointer' src={PBB} alt="pbb" /></Link>
           <p>PBB</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Listrik} alt="listrik" /></Link>
+          <Link to="/transaction?service=listrik"><img className='mb-2 hover:cursor-pointer' src={Listrik} alt="listrik" /></Link>
           <p>Listrik</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Pulsa} alt="pulsa" /></Link>
+          <Link to="/transaction?service=pulsa"><img className='mb-2 hover:cursor-pointer' src={Pulsa} alt="pulsa" /></Link>
           <p>Pulsa</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PDAM} alt="pdam" /></Link>
+          <Link to="/transaction?service=pdam"><img className='mb-2 hover:cursor-pointer' src={PDAM} alt="pdam" /></Link>
           <p>PDAM</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={PGN} alt="pgn" /></Link>
+          <Link to="/transaction?service=pgn"><img className='mb-2 hover:cursor-pointer' src={PGN} alt="pgn" /></Link>
           <p>PGN</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={TV} alt="televisi" /></Link>
+          <Link to="/transaction?service=televisi"><img className='mb-2 hover:cursor-pointer' src={TV} alt="televisi" /></Link>
           <p>Televisi</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Musik} alt="musik" /></Link>
+          <Link to="/transaction?service=musik"><img className='mb-2 hover:cursor-pointer' src={Musik} alt="musik" /></Link>
           <p>Musik</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 mx-auto hover:cursor-pointer' src={Game} alt="voucher game" /></Link>
+          <Link to="/transaction?service=vouchergame"><img className='mb-2 mx-auto hover:cursor-pointer' src={Game} alt="vouchergame" /></Link>
           <p>Voucher Game</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 mx-auto hover:cursor-pointer' src={Voucher} alt="voucher makanan" /></Link>
+          <Link to="/transaction?service=vouchermakanan"><img className='mb-2 mx-auto hover:cursor-pointer' src={Voucher} alt="vouchermakanan" /></Link>
           <p>Voucher Makanan</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Kurban} alt="kurban" /></Link>
+          <Link to="/transaction?service=kurban"><img className='mb-2 hover:cursor-pointer' src={Kurban} alt="kurban" /></Link>
           <p>Kurban</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Zakat} alt="zakat" /></Link>
+          <Link to="/transaction?service=zakat"><img className='mb-2 hover:cursor-pointer' src={Zakat} alt="zakat" /></Link>
           <p>Zakat</p>
         </div>
         <div className='items-center text-center text-xs'>
-          <Link to="/transaction"><img className='mb-2 hover:cursor-pointer' src={Paket} alt="paket data" /></Link>
+          <Link to="/transaction?service=paketdata"><img className='mb-2 hover:cursor-pointer' src={Paket} alt="paketdata" /></Link>
           <p>Paket Data</p>
         </div>
     </div>
