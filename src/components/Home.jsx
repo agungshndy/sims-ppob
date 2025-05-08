@@ -18,7 +18,7 @@ import Banner3 from '../assets/Banner 3.png'
 import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
 import { useNavigate, Link } from 'react-router-dom'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../contexts/UserContext'
 
 const Home = ()=> {
@@ -26,6 +26,8 @@ const Home = ()=> {
   const navigate = useNavigate()
 
   const { user } = useContext(UserContext);
+
+  const [ showBalance, setShowBalance ] = useState(false);
 
   return (
  <div id='home' className='container mx-auto'>
@@ -52,8 +54,10 @@ const Home = ()=> {
         </div>
         <div className='p-5 text-white font-semibold bg-red-600 rounded-xl'>
           <h1 className='mb-4'>Saldo anda</h1>
-          <p className='text-2xl mb-7'>Rp</p>
-          <button className='hover:cursor-pointer text-xs'>Lihat Saldo</button>
+          <p className='text-2xl mb-7'>{showBalance ? `Rp ${user ? user.balance : '0'}` : "Rp ******"}</p>
+          <button className='hover:cursor-pointer text-xs'
+          onClick={()=> setShowBalance(!showBalance)}
+          >{showBalance ? 'Sembunyikan Saldo' : 'Lihat Saldo'}</button>
         </div>
     </div>
     <div className='feature grid grid-cols-12 justify-items-center mt-10'>
