@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +21,8 @@ function TopUp() {
 
   const navigate = useNavigate()
   const { user } = useContext(UserContext)
+
+  const [ showBalance, setShowBalance ] = useState(false);
 
   return (
  <div id='topup' className='container mx-auto'>
@@ -47,9 +49,11 @@ function TopUp() {
             </div>
             <div className='p-5 text-white font-semibold bg-red-600 rounded-xl items-center'>
               <h1 className='mb-5'>Saldo anda</h1>
-              <p className='text-2xl mb-4'>Rp</p>
-              <button className='hover:cursor-pointer text-md mt-2'>
-              Tutup Saldo
+              <p className='text-2xl mb-4'>{showBalance ? `Rp ${user ? user.balance : "0"}` : "Rp ******"}</p>
+              <button className='hover:cursor-pointer text-md mt-2'
+              onClick={()=>setShowBalance(!showBalance)}
+              >
+              {showBalance ? "Sembunyikan Saldo" : "Lihat Saldo"}
               </button>
             </div>
         </div>

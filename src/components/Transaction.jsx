@@ -13,7 +13,7 @@ import Kurban from '../assets/Kurban.png'
 import Zakat from '../assets/Zakat.png'
 import Paket from '../assets/Paket Data.png'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { UserContext } from '../contexts/UserContext'
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
@@ -93,6 +93,8 @@ function Transaction() {
   const navigate = useNavigate()
   const { user } = useContext(UserContext)
 
+  const [ showBalance, setShowBalance ] = useState(false);
+
   return (
  <div id='transaction' className='container mx-auto'>
     <div className='header mb-5'>
@@ -118,9 +120,10 @@ function Transaction() {
             </div>
             <div className='p-5 text-white font-semibold bg-red-600 rounded-xl items-center'>
               <h1 className='mb-5'>Saldo anda</h1>
-              <p className='text-2xl mb-4'>Rp</p>
-              <button className='hover:cursor-pointer text-md mt-2'>
-                Lihat Saldo
+              <p className='text-2xl mb-4'>{showBalance ? `Rp ${user ? user.balance : "0"}` : "Rp ******"}</p>
+              <button className='hover:cursor-pointer text-md mt-2'
+              onClick={()=> setShowBalance(!showBalance)}
+              >{showBalance ? "Sembunyikan Saldo" : "Lihat Saldo"}
               </button>
             </div>
     </div>
