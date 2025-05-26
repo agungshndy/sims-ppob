@@ -3,7 +3,7 @@ import Logo from '../assets/Logo.png'
 import Profile from '../assets/Profile Photo.png'
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
-// import axios from 'axios';
+import axios from 'axios';
 // import { useEffect, useState } from 'react';
 
 function TopUp() {
@@ -20,9 +20,37 @@ function TopUp() {
    // }
 
   const navigate = useNavigate()
-  const { user } = useContext(UserContext)
+  const { user, fetchUser } = useContext(UserContext)
 
   const [ showBalance, setShowBalance ] = useState(false);
+
+  const [ nominal, setNominal ] = useState('');
+
+  const handlePresetClick = (amount)=> {
+    setNominal(amount.toString());
+  }
+
+  const handleTopUp = async () => {
+    const amount = parseInt(nominal, 10);
+    if (!isNaN(amount) && amount > 0 && user) {
+      const newBalance = user.balance + amount;
+
+      try {
+      await axios.put(`https://67b779ea2bddacfb270f1206.mockapi.io/api/sims-ppob/users/${user.id}`, {
+        balance: newBalance
+      });
+      await fetchUser(user.id);
+      setNominal('');
+      alert("Top up berhasil!");
+      }
+      catch (error) {
+        console.error("Top up gagal", error);
+        alert("Top up gagal!");
+      }
+    } else {
+        alert("Masukkan nominal yang valid!")
+    }
+  }
 
   return (
  <div id='topup' className='container mx-auto'>
@@ -62,29 +90,50 @@ function TopUp() {
         <h1 className='text-xl font-semibold mb-5'>Nominal Top Up</h1>
     <div className='grid grid-cols-3'>
       <div className='grid grid-cols-1 col-span-2'>
-        <input className='border border-gray-200 p-2 mt-3 rounded-sm' type="text" name="nominal" id="nominal" placeholder='Masukkan nominal top up'/> 
-        <button className="hover:cursor-pointer my-5 rounded-md bg-gray-300 py-2 px-4 border border-transparent font-semibold text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+        <input  className='border border-gray-200 p-2 mt-3 rounded-sm' 
+                type="text" 
+                name="nominal" 
+                id="nominal" 
+                placeholder='Masukkan nominal top up'
+                value={nominal}
+                onChange={(e)=> setNominal(e.target.value)}
+        /> 
+        <button 
+        onClick={handleTopUp}
+        className="hover:cursor-pointer my-5 rounded-md bg-gray-300 py-2 px-4 border border-transparent font-semibold text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
             Top Up
         </button> 
       </div>
       <div className='flex items-center justify-items-center'>
         <div className='grid grid-cols-3'>
-          <button className='p-2 border border-gray-200 ml-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(10000)}
+          className='p-2 border border-gray-200 ml-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp10.000
           </button>
-          <button className='p-2 border border-gray-200 mx-2 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(20000)}
+          className='p-2 border border-gray-200 mx-2 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp20.000
           </button>
-          <button className='p-2 border border-gray-200 mr-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(50000)}
+          className='p-2 border border-gray-200 mr-3 mt-1 mb-3 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp50.000
           </button>
-          <button className='p-2 border border-gray-200 ml-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(100000)}
+          className='p-2 border border-gray-200 ml-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp100.000
           </button>
-          <button className='p-2 border border-gray-200 m-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(250000)}
+          className='p-2 border border-gray-200 m-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp250.000
           </button>
-          <button className='p-2 border border-gray-200 mr-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
+          <button 
+          onClick={()=> handlePresetClick(500000)}
+          className='p-2 border border-gray-200 mr-3 my-2 rounded hover:cursor-pointer hover:border-red-500 active:bg-red-500 active:font-semibold'>
             Rp500.000
           </button>
         </div>
