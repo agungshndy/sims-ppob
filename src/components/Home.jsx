@@ -18,16 +18,25 @@ import Banner3 from '../assets/Banner 3.png'
 import Banner4 from '../assets/Banner 4.png'
 import Banner5 from '../assets/Banner 5.png'
 import { useNavigate, Link } from 'react-router-dom'
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../contexts/UserContext'
+import { useLocation } from 'react-router-dom'
 
 const Home = ()=> {
 
   const navigate = useNavigate()
 
-  const { user } = useContext(UserContext);
+  const { user, fetchUser } = useContext(UserContext);
+
+  const location = useLocation()
 
   const [ showBalance, setShowBalance ] = useState(false);
+
+  useEffect(()=> {
+    if (user?.id) {
+      fetchUser(user.id)
+    }
+  }, [location])
 
   return (
  <div id='home' className='container mx-auto'>
